@@ -291,8 +291,8 @@ textarea:-ms-input-placeholder {
 
 /*--Section Spacing--*/
 .section-padding {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: 80px;/*padding-top: 130px;*/
+  padding-bottom: 80px;/*padding-bottom: 130px;*/
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -5430,6 +5430,7 @@ select {
 
 .service-content .service-icon-wrapper {
   margin-top: -5px;
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 
