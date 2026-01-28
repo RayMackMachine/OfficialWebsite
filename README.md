@@ -63,4 +63,16 @@ This temporary website is used for:
 
 ---
 
+## Template Credit
+
+This website is built based on the DiwaDental HTML template
+by GridTemplate.
+
+Template source:
+https://www.gridtemplate.com/
+
+License details can be found in the LICENSE and License.txt files.
+
+---
+
 © RayMack / Acerlinks Machinery Co., Ltd.
