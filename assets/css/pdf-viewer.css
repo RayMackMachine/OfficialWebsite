@@ -1,0 +1,114 @@
+/* 基本容器佈局 */
+.catalog-wrapper {
+    max-width: 1200px;
+    width: 95%;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* 標頭：保持橫向排列 */
+.catalog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* 型錄標題 */
+.catalog-title {
+    font-weight: bold;
+    color: #555;
+    font-size: 16px;
+}
+
+/* 控制區域：確保在手機上也是橫的一排 */
+.catalog-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap; /* 強制不換行 */
+}
+
+/* 按鈕樣式優化 */
+.catalog-controls button {
+    padding: 6px 15px;
+    cursor: pointer;
+    background: #004a99;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    line-height: 1.5;
+    transition: background 0.3s;
+}
+
+.catalog-controls button:hover {
+    background: #003366;
+}
+
+/* 頁碼資訊 */
+.page-info {
+    font-size: 13px;
+    font-weight: bold;
+    color: #666;
+    margin-left: 5px;
+    white-space: nowrap;
+}
+
+/* 翻書容器 */
+.viewer-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    padding: 20px 0;
+    border-radius: 12px;
+    min-height: 400px;
+}
+
+#flipbook {
+    margin: 0 auto;
+}
+
+#flipbook .page {
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+#flipbook canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+/* 手機版微調 (螢幕寬度小於 768px) */
+@media (max-width: 768px) {
+    .catalog-header {
+        padding: 8px 10px;
+    }
+    .catalog-title {
+        display: none; /* 手機空間有限，隱藏副標題只留按鈕 */
+    }
+    .catalog-controls {
+        width: 100%;
+        justify-content: center; /* 按鈕居中 */
+    }
+    .catalog-controls button {
+        padding: 5px 12px;
+        font-size: 13px;
+    }
+    .page-info {
+        font-size: 12px;
+    }
+    .viewer-container {
+        padding: 10px 0;
+        min-height: 300px;
+    }
+}

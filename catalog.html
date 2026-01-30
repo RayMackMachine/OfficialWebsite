@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RayMack 產品型錄 - 線上預覽</title>
+
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/pdf-viewer.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+</head>
+
+<body oncontextmenu="return false;">
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-wrapper">
+
+        <div class="section header-section header-2">
+            <div class="header-bottom">
+                <div class="container-fluid">
+                    <div class="header-bottom-wrapper header-bottom-wrapper-2">
+
+                        <div class="header-logo">
+                            <a href="index.html">
+                                <img src="assets/images/logo.png" alt="RayMack 亞維機械">
+                            </a>
+                        </div>
+
+                        <div class="header-right">
+                            <div class="header-primary-menu header-menu-2 d-none d-lg-block">
+                                <ul class="nav-menu">
+                                    <li><a href="about.html">關於我們 About</a></li>
+                                    <li><a href="product-list.html">產品 Product</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="product-SGS1020AHD.html">SGS-1020AHD</a></li>
+                                            <li><a href="product-SGS1224AHD.html">SGS-1224AHD</a></li>
+                                            <li><a href="product-SGS1230AHD.html">SGS-1230AHD</a></li>
+                                            <li><a href="product-SGS1632AHD.html">SGS-1632AHD</a></li>
+                                            <li><a href="product-SGS1640AHD.html">SGS-1640AHD</a></li>
+                                            <li><a href="product-SGS2040AHD.html">SGS-2040AHD</a></li>
+                                            <li><a href="product-SGS2060AHD.html">SGS-2060AHD</a></li>
+                                            <li><a href="product-SGSs2460AHD.html">SGS-S2460AHD</a></li>
+                                            <li><a class="active" href="catalog.html">型錄預覽</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="news-list.html">公司焦點 Highlights</a></li>
+                                    <li><a href="contact.html">聯絡我們 Contact</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="header-toggle d-lg-none">
+                                <button class="menu-toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-start" id="offcanvasMenu">
+            <div class="offcanvas-header">
+                <a class="logo" href="index.html">
+                    <img src="assets/images/logo.png" alt="RayMack 亞維機械">
+                </a>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="mobile-menu">
+                    <ul class="nav-menu">
+                        <li><a href="about.html">關於我們 About</a></li>
+                        <li><a href="product-list.html">產品 Product</a>
+                            <ul class="sub-menu">
+                                <li><a href="product-SGS1020AHD.html">SGS-1020AHD</a></li>
+                                <li><a href="product-SGSs2460AHD.html">SGS-S2460AHD</a></li>
+                                <li><a href="catalog.html">型錄預覽</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="news-list.html">公司焦點 Highlights</a></li>
+                        <li><a href="contact.html">聯絡我們 Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <section class="page-title-area text-center">
+            <div class="container">
+                <h1>產品型錄預覽</h1>
+                <p>專業製造各式平面磨床，行銷全球</p>
+            </div>
+        </section>
+
+        <section class="catalog-wrapper">
+            <div class="catalog-header">
+                <div class="catalog-title">RayMack Surface Grinder Catalog</div>
+                <div class="catalog-controls">
+                    <button id="prev-btn">上一頁</button>
+                    <button id="next-btn">下一頁</button>
+                    <span class="page-info">第 <span id="page-num">1</span> 頁 / 共 <span id="page-count">-</span> 頁</span>
+                </div>
+            </div>
+
+            <div class="viewer-container">
+                <div id="flipbook"></div>
+            </div>
+
+            <div class="catalog-footer text-center mt-3">
+                <small>* 僅供線上瀏覽，如需詳細規格請聯絡業務專員。</small>
+            </div>
+        </section>
+
+    </div> <script>
+        $(window).on('load', function() {
+            $('.preloader').fadeOut(500);
+        });
+    </script>
+    <script src="assets/js/pdf-viewer.js"></script>
+</body>
+
+</html>
