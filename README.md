@@ -67,7 +67,7 @@ This temporary website is used for:
 
 This website is built based on the DiwaDental HTML template
 by GridTemplate.
-
+ 
 Template source:
 https://www.gridtemplate.com/
 
