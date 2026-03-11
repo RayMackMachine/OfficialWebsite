@@ -2412,8 +2412,8 @@ only screen and (max-width: 767px) {
   align-items: center;
   background-color: #ffffff;
   padding: 25px 30px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -2433,7 +2433,7 @@ only screen and (max-width: 767px) {
 @media only screen and (min-width: 768px) and (max-width: 991px),
 only screen and (max-width: 767px) {
   .header-bottom-wrapper {
-    margin-top: 15px;
+    margin-top: 5px;/**/
   }
 }
 
